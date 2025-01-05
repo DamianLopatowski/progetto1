@@ -1,0 +1,408 @@
+/* Header */
+header {
+    display: flex; /* Attiva il layout flexbox */
+    justify-content: space-between; /* Spaziatura tra gli elementi: logo a sinistra, carrello a destra */
+    align-items: center; /* Allinea verticalmente */
+}
+
+/* Logo "Bike Garage" */
+header .logo {
+    margin-left: 0; /* Allinea il logo a sinistra */
+}
+
+/* Navbar e gli altri link centrati */
+.navbar-links {
+    display: flex;
+    justify-content: center; /* Centra i link di navigazione */
+    align-items: center;
+    gap: 20px; /* Spazio tra i link */
+    flex-grow: 1; /* Permette ai link di usare lo spazio rimanente */
+}
+
+/* Carrello (a destra) */
+.cart-container {
+    margin-left: auto; /* Spinge il carrello verso destra */
+}
+
+/* Hamburger menu - solo su dispositivi mobile */
+.hamburger {
+    display: none; /* Rende invisibile il menu hamburger */
+}
+
+
+
+/* Per mobile */
+@media (max-width: 768px) {
+    /* Cambia la disposizione per mobile */
+    header {
+        justify-content: space-between; /* Mantiene il layout a sinistra e destra */
+    }
+
+    .navbar-links {
+        display: none; /* Nasconde i link della navbar sui dispositivi mobili */
+    }
+
+    .hamburger {
+        display: flex; /* Mostra il menu hamburger */
+        margin-left: 190px; /* Aggiunge un margine a sinistra per spostarlo più a destra */
+        position: relative; /* Aggiunge una posizione relativa per gestire meglio gli spostamenti */
+        z-index: 2; /* Assicurati che l'hamburger sia sopra gli altri contenuti */
+    }
+
+    .logo {
+        margin-right: 40px; /* Aggiunge uno spazio tra il logo e il bordo destro */
+    }
+
+    .cart-container {
+        order: 1; /* Cambia l'ordine del carrello su mobile se necessario */
+    }
+}
+
+
+
+/* Stile per il carrello */
+.cart-link {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Aggiungi un po' di spaziatura tra l'icona del carrello e il bordo destro */
+.cart-icon {
+    font-size: 1.5rem;
+    color: white;
+}
+
+    /* Contenitore per WhatsApp */
+.whatsapp-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center; /* Centra verticalmente l'icona e il testo */
+    gap: 10px;
+    font-size: 1.2rem; /* Font size per il testo */
+    color: #333;
+}
+
+/* Icona WhatsApp */
+.whatsapp-icon {
+    font-size: 2rem; /* Dimensione dell'icona */
+    color: #25D366; /* Colore di WhatsApp */
+    transition: transform 0.3s ease;
+}
+
+/* Hover sull'icona WhatsApp */
+.whatsapp-icon:hover {
+    transform: scale(1.2); /* Aumenta la dimensione dell'icona quando viene hoverata */
+}
+
+/* Link WhatsApp */
+.whatsapp-link {
+    color: #25D366; /* Colore del link */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    font-weight: bold; /* Rende il testo in grassetto */
+}
+
+/* Hover sul link WhatsApp */
+.whatsapp-link:hover {
+    text-decoration: underline; /* Aggiunge la sottolineatura al passaggio del mouse */
+}
+
+/* Sezione per il titolo "Seleziona taglia" */
+.bike-sizes {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Imposta la disposizione verticale per il titolo */
+    align-items: center; /* Allinea il testo a sinistra */
+}
+
+.bike-sizes h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+    width: 100%; /* Fa sì che il titolo occupi tutta la larghezza disponibile */
+}
+
+/* Contenitore delle taglie sulla stessa riga per schermi desktop */
+.size-box-container {
+    display: flex; /* Dispone i riquadri delle taglie sulla stessa riga */
+    flex-wrap: wrap; /* Le taglie si adattano alla larghezza disponibile */
+    gap: 10px; /* Distanza tra i riquadri delle taglie */
+    justify-content: flex-start; /* Allinea le taglie a sinistra per desktop */
+}
+
+/* Riquadri delle taglie più piccoli */
+.size-box {
+    margin: 0; /* Rimuove il margine extra */
+    padding: 8px 12px; /* Rende i riquadri più piccoli */
+    font-size: 1rem; /* Rende il testo della taglia più piccolo */
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, border 0.3s;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+/* Taglia disponibile: bordo verde */
+.size-box.available {
+    background-color: #f4f4f4;
+    border-color: green;
+}
+
+/* Quando la taglia è selezionata */
+.size-box.selected {
+    background-color: #4CAF50; /* Verde per la taglia selezionata */
+    color: white;
+    border-color: #388E3C;
+}
+
+/* Hover su taglia */
+.size-box:hover {
+    transform: scale(1.05);
+}
+
+
+
+        /* Stile per il link "Torna alle biciclette" */
+        .back-button {
+            display: inline-block;
+            color: #333;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            color: #f1c40f;
+            text-decoration: underline;
+        }
+
+        /* Stile per l'immagine principale */
+        .main-image {
+            text-align: left;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .main-image img {
+            width: 100%;
+            max-width: 400px; /* Ridotta la larghezza per desktop */
+            height: auto;
+            border-radius: 12px;
+        }
+
+        /* Frecce per scorrere le immagini */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .arrow-left {
+            left: 10px;
+        }
+
+        .arrow-right {
+            right: 10px;
+        }
+
+        /* Slider per le immagini secondarie */
+        .image-slider {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px;
+            margin-top: 0px;
+        }
+
+        /* Miniature delle immagini */
+        .slider-item {
+            flex: 0 0 auto;
+            width: 80px;
+            height: auto;
+        }
+
+        .small-image {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .small-image:hover {
+            transform: scale(1.1);
+        }
+
+        /* Linea sottile sotto l'immagine selezionata */
+        .selected {
+            border-bottom: 3px solid #f1c40f;
+        }
+
+        /* Stile per layout desktop */
+        .info-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Allinea tutto a sinistra */
+            gap: 30px;
+        }
+
+        .info-item {
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+        }
+
+        .info-item h3 {
+            font-size: 1.8rem;
+            margin: 10px 0;
+        }
+
+        .info-item p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .info-item p strong {
+            font-size: 1.6rem;
+        }
+        .main-content {
+    display: flex;
+    align-items: flex-start; /* Allinea il nome in alto rispetto all'immagine */
+    justify-content: flex-start; /* Posiziona immagine e nome uno accanto all'altro */
+    gap: 20px; /* Spazio tra immagine e nome */
+}
+
+/* Nome della bicicletta */
+.bike-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0; /* Rimuove margine extra */
+}
+.bike-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0; /* Rimuove margine extra */
+}
+
+/* Slider e immagine */
+.main-image {
+    flex: 0 0 auto; /* Fissa la dimensione dell'immagine */
+}
+
+.image-slider {
+    margin-top: 20px; /* Spazio tra l'immagine principale e le miniature */
+}
+
+		@media screen and (min-width: 769px) {
+    .bike-name {
+        margin-left: 40px; /* Spostamento a destra */
+        margin-top: 20px; /* Spostamento verso il basso */
+    }
+	.bike-price {
+        margin-left: 40px; /* Spostamento a destra */
+        margin-top: 20px; /* Spostamento verso il basso */
+    }
+}
+		/* MOBILI */
+       @media screen and (max-width: 768px) {
+
+       .size-box-container {
+        justify-content: center; /* Centra i riquadri delle taglie sulla stessa riga */
+        gap: 15px; /* Distanza tra i riquadri */
+    }
+
+    .size-box {
+        font-size: 1rem; /* Mantenere la dimensione della font adatta per mobile */
+        padding: 8px 15px; /* Un po' più grande il padding per mobile */
+        margin: 5px; /* Aggiungi un margine per separare le taglie */
+    }
+
+    .info-box {
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        gap: 15px;
+        padding: 15px 10px;
+        justify-content: start;
+    }
+
+    .info-item {
+        width: 100%;
+        flex: 0 0 auto;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 15px;
+        min-width: 80%;
+        box-sizing: border-box;
+    }
+
+    .info-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .info-item h3 {
+        font-size: 1.8rem;
+        margin: 15px 0;
+    }
+
+    .info-item p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin: 10px 0;
+    }
+
+    .info-item p strong {
+        font-size: 1.6rem;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column; /* Disposizione verticale per mobile */
+        align-items: center; /* Centra gli elementi */
+        gap: 15px; /* Distanza tra gli elementi */
+    }
+
+    /* Nome e prezzo della bicicletta (versione mobile) */
+    .bike-details {
+        text-align: center; /* Centra il nome e il prezzo */
+        width: 100%; /* Assicura che il contenuto si adatti allo schermo */
+        padding: 15px 10px;
+    }
+
+    .bike-name {
+        font-size: 1.7rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px; /* Spazio tra nome e prezzo */
+    }
+
+    .bike-price {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .main-image {
+        margin-bottom: 15px; /* Spazio tra immagine e nome/prezzo */
+    }
+
+    /* Rimuovi slider delle immagini per la versione mobile */
+    .image-slider {
+        display: none;
+    }
+}

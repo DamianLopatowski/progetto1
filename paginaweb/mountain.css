@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+nav .active {
+    text-decoration: underline;
+}
+
+.header-biciclette {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.biciclette-list .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem 1rem;
+}
+
+.bicicletta-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bicicletta-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.bicicletta-card h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.bicicletta-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.bicicletta-card .prezzo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CAF50;
+}

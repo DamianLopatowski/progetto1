@@ -1,0 +1,643 @@
+  *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+
+
+    /* Stile per la sezione Benvenuti */
+#benvenuti {
+    text-align: center;
+    position: relative;
+}
+
+/* Stile per la scritta principale */
+#benvenuti h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem; /* Dimensione per la scritta principale */
+    color: #ffdd00;
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 40px;
+    z-index: 2;
+    position: absolute;
+    top: 40%;  /* Posizione più centrale */
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 1.1; /* Ridotto per rendere il distacco più piccolo */
+}
+
+/* Separazione tra i due testi */
+#benvenuti h1 span {
+    display: block;
+    margin-bottom: 5px; /* Ridotto il margine tra le due righe di testo */
+}
+
+/* Stile per "Bike Garage" (la seconda parte della scritta) */
+.bike-garage {
+    font-size: 3rem; /* Dimensione più grande per "Bike Garage" */
+    font-weight: bold; /* Aumenta il peso per far risaltare "Bike Garage" */
+}
+
+/* Stile per l'immagine */
+.entrata-img {
+    width: 100%;
+    height: 460px; /* Aumenta l'altezza dell'immagine */
+    object-fit: cover;
+    filter: brightness(0.4); /* Immagine più scura per migliorare la visibilità della scritta */
+}
+
+
+
+       /* Stile generale della sezione */
+#vieni-a-trovarci {
+    background-color: #F0F0F0;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#vieni-a-trovarci .container {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif; /* Font originale richiesto */
+}
+
+/* Titolo */
+#vieni-a-trovarci .title {
+    font-size: 32px; /* Dimensione come richiesto */
+    font-weight: 600;
+    color: #333333; /* Colore del testo come richiesto */
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+/* Testo */
+#vieni-a-trovarci .text {
+    font-size: 18px; /* Dimensione come richiesta */
+    line-height: 1.6;
+    opacity: 0.85;
+    margin-bottom: 30px;
+    color: #333333; /* Colore del testo come richiesto */
+}
+
+/* Orari */
+.orari {
+    background-color: #F7F7F7;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.orari ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.orari li {
+    font-size: 18px; /* Dimensione orari come richiesto */
+    color: #333333; /* Colore testo orari */
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orari .day {
+    font-weight: 600;
+    margin-right: 10px;
+    color: #2C7A4C; /* Colore verde per il giorno */
+}
+
+/* Bottone per mappa */
+.button {
+    display: inline-block;
+    background-color: #2C7A4C; /* Bottone verde come richiesto */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 18px; /* Dimensione del bottone come richiesto */
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #256d3f; /* Verde più scuro al passaggio del mouse */
+    transform: scale(1.05);
+}
+
+        /* Header */
+        header {
+            background-color: #005f73;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            display: flex; /* Attiva il layout flexbox */
+            justify-content: center; /* Centra il testo principale */
+            align-items: center; /* Allinea verticalmente */
+            gap: 20px; /* Spazio tra gli elementi */
+        }
+
+header img {
+    max-width: 80px; /* Dimensione massima delle immagini */
+    height: auto; /* Mantieni le proporzioni */
+}
+/* Regola specifica per il logo Merida */
+header img.logo-right {
+    max-width: 75px; /* 20% più grande rispetto a 80px */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    flex: 1; /* Permette al titolo di occupare lo spazio rimanente */
+    text-align: center; /* Garantisce il testo al centro */
+}
+
+.logo-left,
+.logo-right {
+    flex-shrink: 0; /* Evita che le immagini si ridimensionino troppo */
+}
+
+           /* Sezione Usato Certificato */
+    .featured-models.usato h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffdd00; /* Colore della scritta "Bike Garage" */
+    font-family: 'Dancing Script', cursive; /* Stessa font della scritta "Bike Garage" */
+}
+
+
+    .featured-models.usato h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #cca300;
+    }
+
+    .carousel-item.usato img {
+    border: 2px solid #cca300; /* Bordo giallo come la scritta "Bike Garage" */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leggera ombra per far risaltare l'immagine */
+    border-radius: 8px; /* Angoli arrotondati */
+}
+
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: center; /* Centra tutto per il desktop */
+            align-items: center;
+            background-color: #0a9396;
+            padding: 10px 20px;
+        }
+
+        .navbar-links {
+            display: flex;
+            justify-content: center;  /* Centra i link */
+            align-items: center;
+            gap: 20px;
+    		flex-grow: 1; /* Permette di usare lo spazio rimanente */
+
+        }
+
+
+
+        nav a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #005f73;
+            border-radius: 5px;
+        }
+
+        .logo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: #ffdd00;
+            /* Centrare la logo nel desktop */
+            position: absolute;
+            left: 20px; /* La scritta "Bike Garage" si sposterà a sinistra nel mobile */
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px;
+        }
+
+        /* Menu a tendina */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #0a9396;
+            min-width: 200px;
+            z-index: 1;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-content ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown-content ul li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .dropdown-content ul li:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 12px 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .dropdown-content ul li a:hover {
+            background-color: #005f73;
+            color: #ffdd00;
+        }
+
+        /* Aggiungi un'animazione leggera */
+        .dropdown-content ul li a {
+            font-weight: bold;
+            font-size: 1rem;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Stile mobile */
+        @media (max-width: 768px) {
+            .navbar-links {
+                display: none;
+            }
+
+
+
+            .orari ul li {
+        font-size: 14px; /* Riduci la dimensione del testo */
+        line-height: 1.6; /* Spazio tra le righe */
+        margin-bottom: 10px; /* Spazio tra i giorni */
+    }
+
+    /* Stile per Lunedì-Venerdì */
+    .orari ul li:first-child {
+        display: flex;
+        flex-direction: column; /* Forza la divisione su due righe */
+    }
+
+    .orari ul li:first-child .day {
+        font-weight: bold; /* Evidenzia il giorno */
+        margin-bottom: 4px; /* Spazio sotto il giorno */
+    }
+
+            .entrata-img {
+        height: 300px; /* Ridurre l'altezza sui dispositivi mobili */
+    }
+
+    #benvenuti h1 {
+        font-size: 1.8rem; /* Ridurre la dimensione del testo su mobile */
+        top: 25%;
+    }
+
+    .bike-garage {
+        font-size: 2.5rem; /* Ridurre la dimensione per mobile */
+    }
+
+            /* Carosello mobile */
+.carousel-container {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.carousel-items {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Evita overflow */
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #fff; /* Sfondo bianco per miglior leggibilità */
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Ombra leggera per evidenziare */
+}
+
+.carousel-item img {
+    width: 90%; /* Margini laterali per evitare che tocchi i bordi */
+    height: 200px; /* Altezza fissa per mobile */
+    object-fit: contain; /* Adatta le immagini senza tagliarle */
+    background-color: #ddd; /* Sfondo normale per spazi vuoti */
+    border-radius: 8px; /* Aggiungi un bordo arrotondato */
+    border: 2px solid #333; /* Bordo sottile per separare le immagini */
+}
+
+.carousel-item h3 {
+    margin-top: 10px;
+    font-size: 1.2rem; /* Font leggibile su dispositivi mobili */
+    color: #333; /* Testo scuro per leggibilità */
+    text-align: center; /* Allineamento centrale */
+}
+
+.carousel-item p {
+    margin-top: 5px;
+    font-size: 0.9rem; /* Testo leggermente più piccolo */
+    color: #666; /* Testo grigio per secondario */
+    text-align: center; /* Allineamento centrale */
+    padding: 0 10px; /* Margini laterali per il testo */
+}
+
+.carousel-item button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #0a9396; /* Colore distintivo per il pulsante */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-item button:hover {
+    background-color: #005f73; /* Cambio colore al passaggio del mouse */
+}
+
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                z-index: 10;
+                background-color: #0a9396;
+                width: 100%;
+                padding: 10px 0;
+                text-align: center;
+            }
+
+            .mobile-menu a {
+                color: white;
+                text-decoration: none;
+                padding: 10px;
+            }
+
+            .mobile-menu a:hover {
+                background-color: #005f73;
+            }
+
+            .mobile-menu.active {
+                display: flex;
+            }
+
+            /* Carosello mobile */
+            .carousel-container {
+                position: relative;
+                display: flex;
+                overflow: hidden;
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .carousel-items {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Evita overflow */
+}
+
+
+            .carousel-item {
+                min-width: 100%;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .carousel-item img {
+                 width: 100%;
+            height: 200px; /* Altezza fissa per mobile */
+            object-fit: contain; /* Adatta le immagini senza tagliarle */
+            background-color: #ddd; /* Sfondo normale per spazi vuoti */
+            border-radius: 8px;
+            }
+
+            .carousel-item h3, .carousel-item p {
+                margin-top: 10px;
+            }
+
+            .arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                font-size: 2rem;
+                padding: 10px;
+                cursor: pointer;
+                border: none;
+                z-index: 10;
+            }
+
+            .arrow-left {
+                left: 10px;
+            }
+
+            .arrow-right {
+                right: 10px;
+            }
+
+            /* Gestione tendine mobile */
+            .dropdown-mobile {
+                position: relative;
+            }
+
+            .dropdown-content-mobile {
+                display: none;
+                flex-direction: column;
+                background-color: #0a9396;
+                text-align: left;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+            }
+
+            .dropdown-content-mobile a {
+                padding: 12px 20px;
+            }
+
+            .dropdown-mobile.active .dropdown-content-mobile {
+                display: flex;
+            }
+
+        }
+
+        /* Stile per desktop (grande) */
+        @media (min-width: 768px) {
+
+             #vieni-a-trovarci {
+        padding: 40px 20px;
+    }
+
+    .orari {
+        padding: 15px;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+
+
+            header img {
+                max-width: 200px; /* Dimensione per desktop */
+                height: auto; /* Mantieni le proporzioni */
+            }
+
+            header img.logo-right {
+                max-width: 170px; /* 20% più grande rispetto a 200px */
+            }
+            .mobile-menu {
+                display: none !important;
+            }
+
+            .navbar-links {
+                display: flex;
+            }
+
+            .hamburger {
+                display: none;
+            }
+
+            /* Carosello desktop - Modelli di bici affiancati */
+            /* Stile per il carosello */
+/* Stile per il carosello */
+.carousel-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.carousel-items {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Evita overflow */
+}
+
+.carousel-item {
+    min-width: 33.33%; /* Tre colonne */
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Per fare in modo che il contenuto sia disposto in colonna */
+    justify-content: space-between; /* Spaziatura tra l'immagine e il pulsante */
+    align-items: center; /* Allinea il contenuto al centro */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto; /* Mantieni le proporzioni sul desktop */
+    border-radius: 8px;
+    border: 2px solid #333; /* Bordo grigio scuro per le immagini usate */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leggera ombra per far risaltare l'immagine */
+}
+
+/* Pulsante "Scopri di più" */
+.carousel-item button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #0a9396; /* Colore distintivo per il pulsante */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center; /* Allinea il pulsante al centro */
+}
+
+.carousel-item button:hover {
+    background-color: #005f73; /* Cambio colore al passaggio del mouse */
+}
+            .arrow {
+                display: none;
+            }
+        }
+
+        .featured-models {
+            padding: 40px 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+            position: relative;
+        }
+
+        .featured-models h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background-color: #333;
+            color: white;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
