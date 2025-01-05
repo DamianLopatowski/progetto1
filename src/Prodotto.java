@@ -1,15 +1,15 @@
-public class Prodotto {
+public class Prodotto { //ciao
     private String nome;
-    private int quantità;
+    private int quantita;
     private String scaffale;
     private String codiceBarre;
     private int soglia;
     private double prezzoAcquisto; // Nuovo attributo
     private double prezzoVendita;   // Nuovo attributo
 
-    public Prodotto(String nome, int quantità, String scaffale, String codiceBarre, double prezzoAcquisto, double prezzoVendita) {
+    public Prodotto(String nome, int quantita, String scaffale, String codiceBarre, double prezzoAcquisto, double prezzoVendita) {
         this.nome = nome;
-        this.quantità = quantità;
+        this.quantita = quantita;
         this.scaffale = scaffale;
         this.codiceBarre = codiceBarre;
         this.soglia = 0; // Soglia di default
@@ -26,12 +26,12 @@ public class Prodotto {
         this.nome = nome;
     }
 
-    public int getQuantità() {
-        return quantità;
+    public int getQuantita() {
+        return quantita;
     }
 
-    public void setQuantità(int quantità) {
-        this.quantità = quantità;
+    public void setQuantita(int quantita) {
+        this.quantita = quantita;
     }
 
     public String getScaffale() {

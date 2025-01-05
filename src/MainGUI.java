@@ -210,7 +210,7 @@ public class MainGUI extends JFrame {
                 for (Prodotto prodotto : prodotti) {
                     if ((prodotto.getNome().equalsIgnoreCase(nome) || prodotto.getCodiceBarre().equalsIgnoreCase(codiceBarre))
                             && prodotto.getScaffale().equalsIgnoreCase(scaffale)) {
-                        prodotto.setQuantità(prodotto.getQuantità() + quantità); // Aggiungi la quantità
+                        prodotto.setQuantita(prodotto.getQuantita() + quantità); // Aggiungi la quantità
                         prodottoEsistente = true;
                         break; // Esci dal ciclo
                     }
@@ -258,10 +258,10 @@ public class MainGUI extends JFrame {
                     if ((prodotto.getNome().equalsIgnoreCase(nome) || prodotto.getCodiceBarre().equalsIgnoreCase(codice))
                             && prodotto.getScaffale().equalsIgnoreCase(scaffale)) {
                         prodottoTrovato = true;
-                        if (prodotto.getQuantità() >= quantità) {
-                            prodotto.setQuantità(prodotto.getQuantità() - quantità);
-                            if (prodotto.getQuantità() < 0) {
-                                prodotto.setQuantità(0); // Non dovrebbe mai succedere
+                        if (prodotto.getQuantita() >= quantità) {
+                            prodotto.setQuantita(prodotto.getQuantita() - quantità);
+                            if (prodotto.getQuantita() < 0) {
+                                prodotto.setQuantita(0); // Non dovrebbe mai succedere
                             }
                             break; // Esci dal ciclo
                         } else {
@@ -293,7 +293,7 @@ public class MainGUI extends JFrame {
                 for (Prodotto prodotto : prodotti) {
                     if (prodotto.getNome().equalsIgnoreCase(nome) || prodotto.getCodiceBarre().equalsIgnoreCase(codice)) {
                         risultati.append("Prodotto: ").append(prodotto.getNome())
-                                .append(", Quantità: ").append(prodotto.getQuantità())
+                                .append(", Quantità: ").append(prodotto.getQuantita())
                                 .append(", Scaffale: ").append(prodotto.getScaffale())
                                 .append(", Codice a barre: ").append(prodotto.getCodiceBarre())
                                 .append(", Prezzo Acquisto: ").append(prodotto.getPrezzoAcquisto())
@@ -419,7 +419,7 @@ public class MainGUI extends JFrame {
         for (Prodotto prodotto : prodotti) {
             tableModel.addRow(new Object[]{
                     prodotto.getNome(),
-                    prodotto.getQuantità(),
+                    prodotto.getQuantita(),
                     prodotto.getScaffale(),
                     prodotto.getCodiceBarre(),
                     prodotto.getPrezzoAcquisto(), // Aggiunto
@@ -437,7 +437,7 @@ public class MainGUI extends JFrame {
         for (Prodotto prodotto : prodotti) {
             // Usa il nome per aggregare
             quantitàPerNome.put(prodotto.getNome(),
-                    quantitàPerNome.getOrDefault(prodotto.getNome(), 0) + prodotto.getQuantità());
+                    quantitàPerNome.getOrDefault(prodotto.getNome(), 0) + prodotto.getQuantita());
         }
 
         // Controlla la soglia per ogni prodotto aggregato
@@ -462,7 +462,7 @@ public class MainGUI extends JFrame {
         int totale = 0;
         for (Prodotto prodotto : prodotti) {
             if (prodotto.getNome().equalsIgnoreCase(nome)) {
-                totale += prodotto.getQuantità();
+                totale += prodotto.getQuantita();
             }
         }
         return totale;

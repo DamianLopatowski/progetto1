@@ -38,7 +38,7 @@ public class GestioneFile {
         try (PrintWriter pw = new PrintWriter(new FileWriter(filePath))) {
             for (Prodotto prodotto : prodotti) {
                 pw.println(prodotto.getNome() + "," +
-                        prodotto.getQuantità() + "," +
+                        prodotto.getQuantita() + "," +
                         prodotto.getScaffale() + "," +
                         prodotto.getCodiceBarre() + "," +
                         prodotto.getPrezzoAcquisto() + "," +
